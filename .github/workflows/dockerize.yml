@@ -1,0 +1,22 @@
+name: Dockerization
+on:
+  push:
+    # paths:
+    #   - 'sub-project/**'
+    paths-ignore:
+      - '**.md'
+jobs:
+  build:
+    name: dockerize
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Print environment
+      run: |
+        printenv | grep GITHUB_
+    - name: Build and publish
+      uses: dta4/hub/dockerize@master
+      with:
+        image: ioccc
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        docker_token: ${{ secrets.DOCKER_TOKEN }}
