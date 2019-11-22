@@ -77,7 +77,7 @@ Remember that `make` is using git [**hub** CLI][9]. There is a [Wiki page][10] w
 - [ ] provide additional Dockerfiles
 - [ ] [Tini][12] as explicit `init` for containers instead of `--init`
 - [ ] [mo][14] as [mustache][13] template engine
-
+- [ ] improve documentation
 
 > Written with [StackEdit](https://stackedit.io/).
 
