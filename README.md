@@ -1,6 +1,10 @@
-This is a working, but very simple dummy open source project, that shall help to
+![](https://github.com/dta4/ioccc/workflows/Dockerization/badge.svg)
+
+This is a working, but very simple dummy project, that shall help to
 * integrate open source projects into your On-Prem CI/CD pipeline
 * provide a blue print for [Alpine][4] based dockerization
+
+---
 
 It implements a browser based simulation of *reaction-diffusion systems* using [WebSockets][8], build in memoriam and as reminiscence to [Alan Turing][2]. The 3.045 bytes of code come from [Yusuke Endoh][0] and were an [IOCCC winner][1] in 2015.
 
@@ -68,9 +72,12 @@ Remember that `make` is using git [**hub** CLI][9]. There is a [Wiki page][10] w
 
 ### TODO
 
-- [x] automated [DockerHub][5] builds
+- [ ] automated [DockerHub][5] publishing
 - [x] releasing and publishing on GitHub via local build environment
 - [ ] provide additional Dockerfiles
+- [ ] [Tini][12] as explicit `init` for containers instead of `--init`
+- [ ] [mo][14] as [mustache][13] template engine
+
 
 > Written with [StackEdit](https://stackedit.io/).
 
@@ -87,5 +94,8 @@ Remember that `make` is using git [**hub** CLI][9]. There is a [Wiki page][10] w
 [6]: https://docs.docker.com/develop/develop-images/multistage-build/
 [7]: https://success.docker.com/article/use-a-script-to-initialize-stateful-container-data
 [8]: https://en.wikipedia.org/wiki/WebSocket
-[9]: https://hub.docker.com/r/dta4/ioccc
-[10]: https://github.com/dta4/ioccc/wiki/Some-short-git-snippets
+[9]: https://hub.github.com/
+[10]: https://github.com/dta4/commons/wiki/GitHub-Workflow
+[12]: https://github.com/krallin/tini
+[13]: https://mustache.github.io/
+[14]: https://github.com/tests-always-included/mo
